@@ -1,0 +1,55 @@
+Total number of functions: 7
+Total number of basic blocks: 7
+Total number of instructions: 17
+[./samples/linear.c] Function: f3
+-------------------------------------
+Basic block 0: entry (Predecessors: [])
+[4] return 0
+
+
+[./samples/linear.c] Function: f2
+-------------------------------------
+Basic block 1: entry (Predecessors: [])
+[8] return 0
+
+
+[./samples/linear.c] Function: f1
+-------------------------------------
+Basic block 2: entry (Predecessors: [])
+[12] return 0
+
+
+[./samples/linear.c] Function: bar
+-------------------------------------
+Basic block 3: entry (Predecessors: [])
+[16] call = call (fp3_bar) ()
+[17] return 0
+
+
+[./samples/linear.c] Function: foo
+-------------------------------------
+Basic block 4: entry (Predecessors: [])
+[22] <fp3_bar, 1> = <f3, 1>
+[22] call = call bar(i32 (...)* bitcast (i32 ()* @f3 to i32 (...)*))
+[23] call1 = call f3()
+[24] return 0
+
+
+[./samples/linear.c] Function: fun
+-------------------------------------
+Basic block 5: entry (Predecessors: [])
+[29] <fp2_foo, 1> = <f2, 1>
+[29] call = call foo(i32 (...)* bitcast (i32 ()* @f2 to i32 (...)*))
+[30] call1 = call f2()
+[31] return 0
+
+
+[./samples/linear.c] Function: main
+-------------------------------------
+Basic block 6: entry (Predecessors: [])
+[36] <fp1_fun, 1> = <f1, 1>
+[36] call = call fun(i32 (...)* bitcast (i32 ()* @f1 to i32 (...)*))
+[37] call1 = call f1()
+[38] return 0
+
+

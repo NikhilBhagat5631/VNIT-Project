@@ -1,0 +1,191 @@
+Total number of functions: 21
+Total number of basic blocks: 21
+Total number of instructions: 83
+[./samples/testcase2.c] Function: main
+-------------------------------------
+Basic block 0: entry (Predecessors: [])
+[56] <val_func6, 1> = <6, 1>
+[56] func6(6)
+[57] <val_func7, 1> = <7, 1>
+[57] func7(7)
+[58] <val_func8, 1> = <8, 1>
+[58] func8(8)
+[59] <val_func9, 1> = <9, 1>
+[59] func9(9)
+[60] <val_func10, 1> = <10, 1>
+[60] func10(10)
+[61] <val_func11, 1> = <11, 1>
+[61] func11(11)
+[62] <val_func12, 1> = <12, 1>
+[62] func12(12)
+[64] return 0
+
+
+[./samples/testcase2.c] Function: func6
+-------------------------------------
+Basic block 1: entry (Predecessors: [])
+[119] <val_func12, 1> = <6, 1>
+[119] func12(6)
+[121] <val_func13, 1> = <6, 1>
+[121] func13(6)
+[122] call = call printf(.str.13[0][0], val_func6)
+[123] return 
+
+
+[./samples/testcase2.c] Function: func14
+-------------------------------------
+Basic block 9: entry (Predecessors: [])
+[70] call = call printf(.str.1[0][0], val_func14)
+[71] return 
+
+
+[./samples/testcase2.c] Function: func7
+-------------------------------------
+Basic block 2: entry (Predecessors: [])
+[127] <val_func14, 1> = <7, 1>
+[127] func14(7)
+[129] <val_func15, 1> = <7, 1>
+[129] func15(7)
+[130] call = call printf(.str.14[0][0], val_func7)
+[131] return 
+
+
+[./samples/testcase2.c] Function: func8
+-------------------------------------
+Basic block 3: entry (Predecessors: [])
+[135] <val_func16, 1> = <8, 1>
+[135] func16(8)
+[137] <val_func17, 1> = <8, 1>
+[137] func17(8)
+[138] call = call printf(.str.15[0][0], val_func8)
+[139] return 
+
+
+[./samples/testcase2.c] Function: func9
+-------------------------------------
+Basic block 4: entry (Predecessors: [])
+[143] <val_func18, 1> = <9, 1>
+[143] func18(9)
+[145] <val_func19, 1> = <9, 1>
+[145] func19(9)
+[146] call = call printf(.str.16[0][0], val_func9)
+[147] return 
+
+
+[./samples/testcase2.c] Function: func10
+-------------------------------------
+Basic block 5: entry (Predecessors: [])
+[151] <val_func20, 1> = <10, 1>
+[151] func20(10)
+[153] <val_func21, 1> = <10, 1>
+[153] func21(10)
+[154] call = call printf(.str.17[0][0], val_func10)
+[155] return 
+
+
+[./samples/testcase2.c] Function: func11
+-------------------------------------
+Basic block 6: entry (Predecessors: [])
+[159] <val_func22, 1> = <11, 1>
+[159] func22(11)
+[161] <val_func23, 1> = <11, 1>
+[161] func23(11)
+[162] call = call printf(.str.18[0][0], val_func11)
+[163] return 
+
+
+[./samples/testcase2.c] Function: func12
+-------------------------------------
+Basic block 7: entry (Predecessors: [])
+[167] <val_func24, 1> = <12, 1>
+[167] func24(12)
+[169] <val_func25, 1> = <12, 1>
+[169] func25(12)
+[170] call = call printf(.str.19[0][0], val_func12)
+[171] return 
+
+
+[./samples/testcase2.c] Function: func24
+-------------------------------------
+Basic block 19: entry (Predecessors: [])
+[110] call = call printf(.str.11[0][0], val_func24)
+[111] return 
+
+
+[./samples/testcase2.c] Function: func13
+-------------------------------------
+Basic block 8: entry (Predecessors: [])
+[66] call = call printf(.str[0][0], val_func13)
+[67] return 
+
+
+[./samples/testcase2.c] Function: func15
+-------------------------------------
+Basic block 10: entry (Predecessors: [])
+[74] call = call printf(.str.2[0][0], val_func15)
+[75] return 
+
+
+[./samples/testcase2.c] Function: func16
+-------------------------------------
+Basic block 11: entry (Predecessors: [])
+[78] call = call printf(.str.3[0][0], val_func16)
+[79] return 
+
+
+[./samples/testcase2.c] Function: func17
+-------------------------------------
+Basic block 12: entry (Predecessors: [])
+[82] call = call printf(.str.4[0][0], val_func17)
+[83] return 
+
+
+[./samples/testcase2.c] Function: func18
+-------------------------------------
+Basic block 13: entry (Predecessors: [])
+[86] call = call printf(.str.5[0][0], val_func18)
+[87] return 
+
+
+[./samples/testcase2.c] Function: func19
+-------------------------------------
+Basic block 14: entry (Predecessors: [])
+[90] call = call printf(.str.6[0][0], val_func19)
+[91] return 
+
+
+[./samples/testcase2.c] Function: func20
+-------------------------------------
+Basic block 15: entry (Predecessors: [])
+[94] call = call printf(.str.7[0][0], val_func20)
+[95] return 
+
+
+[./samples/testcase2.c] Function: func21
+-------------------------------------
+Basic block 16: entry (Predecessors: [])
+[98] call = call printf(.str.8[0][0], val_func21)
+[99] return 
+
+
+[./samples/testcase2.c] Function: func22
+-------------------------------------
+Basic block 17: entry (Predecessors: [])
+[102] call = call printf(.str.9[0][0], val_func22)
+[103] return 
+
+
+[./samples/testcase2.c] Function: func23
+-------------------------------------
+Basic block 18: entry (Predecessors: [])
+[106] call = call printf(.str.10[0][0], val_func23)
+[107] return 
+
+
+[./samples/testcase2.c] Function: func25
+-------------------------------------
+Basic block 20: entry (Predecessors: [])
+[114] call = call printf(.str.12[0][0], val_func25)
+[115] return 
+
+

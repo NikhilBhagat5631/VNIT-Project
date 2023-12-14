@@ -1,0 +1,669 @@
+Total number of functions: 31
+Total number of basic blocks: 127
+Total number of instructions: 223
+[./samples/ifelse.c] Function: main
+-------------------------------------
+Basic block 0: entry (Predecessors: [])
+[60] cmp_main = 1 == 1
+[60] branch (cmp_main) if.then_main, if.else_main
+
+
+Basic block 1: if.then_main (Predecessors: [entry])
+[62] branch if.end16_main
+
+
+Basic block 2: if.else_main (Predecessors: [entry])
+[62] cmp1_main = 1 == 2
+[62] branch (cmp1_main) if.then2_main, if.else3_main
+
+
+Basic block 15: if.end16_main (Predecessors: [if.end15_main, if.then_main])
+FuncPtr.3_main = phi(func1, FuncPtr.2_main)
+[75] (FuncPtr.3_main) (1, func6)
+[77] branch return_main
+
+
+Basic block 3: if.then2_main (Predecessors: [if.else_main])
+[64] branch if.end15_main
+
+
+Basic block 4: if.else3_main (Predecessors: [if.else_main])
+[64] cmp4_main = 1 == 3
+[64] branch (cmp4_main) if.then5_main, if.else6_main
+
+
+Basic block 14: if.end15_main (Predecessors: [if.end14_main, if.then2_main])
+FuncPtr.2_main = phi(func2, FuncPtr.1_main)
+branch if.end16_main
+
+
+Basic block 5: if.then5_main (Predecessors: [if.else3_main])
+[66] branch if.end14_main
+
+
+Basic block 6: if.else6_main (Predecessors: [if.else3_main])
+[66] cmp7_main = 1 == 4
+[66] branch (cmp7_main) if.then8_main, if.else9_main
+
+
+Basic block 13: if.end14_main (Predecessors: [if.end13_main, if.then5_main])
+FuncPtr.1_main = phi(func3, FuncPtr.0_main)
+branch if.end15_main
+
+
+Basic block 7: if.then8_main (Predecessors: [if.else6_main])
+[68] branch if.end13_main
+
+
+Basic block 8: if.else9_main (Predecessors: [if.else6_main])
+[68] cmp10_main = 1 == 5
+[68] branch (cmp10_main) if.then11_main, if.else12_main
+
+
+Basic block 12: if.end13_main (Predecessors: [if.end_main, if.then8_main])
+FuncPtr.0_main = phi(func4, func5)
+branch if.end14_main
+
+
+Basic block 9: if.then11_main (Predecessors: [if.else9_main])
+[70] branch if.end_main
+
+
+Basic block 10: if.else12_main (Predecessors: [if.else9_main])
+[71] call = call printf(.str[0][0])
+[72] branch return_main
+
+
+Basic block 11: if.end_main (Predecessors: [if.then11_main])
+branch if.end13_main
+
+
+Basic block 16: return_main (Predecessors: [if.end16_main, if.else12_main])
+[78] return 0
+
+
+[./samples/ifelse.c] Function: func7
+-------------------------------------
+Basic block 103: entry (Predecessors: [])
+[186] call = call printf(.str.1[0][0], val_func7)
+[187] return 
+
+
+[./samples/ifelse.c] Function: func6
+-------------------------------------
+Basic block 17: entry (Predecessors: [])
+[182] call = call printf(.str.1[0][0], val_func6)
+[183] return 
+
+
+[./samples/ifelse.c] Function: func1
+-------------------------------------
+Basic block 18: entry (Predecessors: [])
+[82] cmp_func1 = val_func1 == 1
+[82] branch (cmp_func1) if.then_func1, if.else_func1
+
+
+Basic block 19: if.then_func1 (Predecessors: [entry])
+[84] branch if.end16_func1
+
+
+Basic block 20: if.else_func1 (Predecessors: [entry])
+[84] cmp1_func1 = val_func1 == 2
+[84] branch (cmp1_func1) if.then2_func1, if.else3_func1
+
+
+Basic block 33: if.end16_func1 (Predecessors: [if.end15_func1, if.then_func1])
+funcP1.addr.3_func1 = phi(func6, funcP1.addr.2_func1)
+[97] (funcP1.addr.3_func1) (val_func1)
+[98] call17 = call printf(.str.1[0][0], val_func1)
+[99] branch return_func1
+
+
+Basic block 21: if.then2_func1 (Predecessors: [if.else_func1])
+[86] branch if.end15_func1
+
+
+Basic block 22: if.else3_func1 (Predecessors: [if.else_func1])
+[86] cmp4_func1 = val_func1 == 3
+[86] branch (cmp4_func1) if.then5_func1, if.else6_func1
+
+
+Basic block 32: if.end15_func1 (Predecessors: [if.end14_func1, if.then2_func1])
+funcP1.addr.2_func1 = phi(func7, funcP1.addr.1_func1)
+branch if.end16_func1
+
+
+Basic block 23: if.then5_func1 (Predecessors: [if.else3_func1])
+[88] branch if.end14_func1
+
+
+Basic block 24: if.else6_func1 (Predecessors: [if.else3_func1])
+[88] cmp7_func1 = val_func1 == 50
+[88] branch (cmp7_func1) if.then8_func1, if.else9_func1
+
+
+Basic block 31: if.end14_func1 (Predecessors: [if.end13_func1, if.then5_func1])
+funcP1.addr.1_func1 = phi(func8, funcP1.addr.0_func1)
+branch if.end15_func1
+
+
+Basic block 25: if.then8_func1 (Predecessors: [if.else6_func1])
+[90] branch if.end13_func1
+
+
+Basic block 26: if.else9_func1 (Predecessors: [if.else6_func1])
+[90] cmp10_func1 = val_func1 == 50
+[90] branch (cmp10_func1) if.then11_func1, if.else12_func1
+
+
+Basic block 30: if.end13_func1 (Predecessors: [if.end_func1, if.then8_func1])
+funcP1.addr.0_func1 = phi(func9, func10)
+branch if.end14_func1
+
+
+Basic block 27: if.then11_func1 (Predecessors: [if.else9_func1])
+[92] branch if.end_func1
+
+
+Basic block 28: if.else12_func1 (Predecessors: [if.else9_func1])
+[93] call = call printf(.str[0][0])
+[94] branch return_func1
+
+
+Basic block 29: if.end_func1 (Predecessors: [if.then11_func1])
+branch if.end13_func1
+
+
+Basic block 34: return_func1 (Predecessors: [if.end16_func1, if.else12_func1])
+[100] return 
+
+
+[./samples/ifelse.c] Function: func2
+-------------------------------------
+Basic block 35: entry (Predecessors: [])
+[102] cmp_func2 = val_func2 == 1
+[102] branch (cmp_func2) if.then_func2, if.else_func2
+
+
+Basic block 36: if.then_func2 (Predecessors: [entry])
+[104] branch if.end16_func2
+
+
+Basic block 37: if.else_func2 (Predecessors: [entry])
+[104] cmp1_func2 = val_func2 == 2
+[104] branch (cmp1_func2) if.then2_func2, if.else3_func2
+
+
+Basic block 50: if.end16_func2 (Predecessors: [if.end15_func2, if.then_func2])
+funcP2.addr.3_func2 = phi(func11, funcP2.addr.2_func2)
+[117] (funcP2.addr.3_func2) (val_func2)
+[118] call17 = call printf(.str.1[0][0], val_func2)
+[119] branch return_func2
+
+
+Basic block 38: if.then2_func2 (Predecessors: [if.else_func2])
+[106] branch if.end15_func2
+
+
+Basic block 39: if.else3_func2 (Predecessors: [if.else_func2])
+[106] cmp4_func2 = val_func2 == 3
+[106] branch (cmp4_func2) if.then5_func2, if.else6_func2
+
+
+Basic block 49: if.end15_func2 (Predecessors: [if.end14_func2, if.then2_func2])
+funcP2.addr.2_func2 = phi(func12, funcP2.addr.1_func2)
+branch if.end16_func2
+
+
+Basic block 40: if.then5_func2 (Predecessors: [if.else3_func2])
+[108] branch if.end14_func2
+
+
+Basic block 41: if.else6_func2 (Predecessors: [if.else3_func2])
+[108] cmp7_func2 = val_func2 == 50
+[108] branch (cmp7_func2) if.then8_func2, if.else9_func2
+
+
+Basic block 48: if.end14_func2 (Predecessors: [if.end13_func2, if.then5_func2])
+funcP2.addr.1_func2 = phi(func13, funcP2.addr.0_func2)
+branch if.end15_func2
+
+
+Basic block 42: if.then8_func2 (Predecessors: [if.else6_func2])
+[110] branch if.end13_func2
+
+
+Basic block 43: if.else9_func2 (Predecessors: [if.else6_func2])
+[110] cmp10_func2 = val_func2 == 50
+[110] branch (cmp10_func2) if.then11_func2, if.else12_func2
+
+
+Basic block 47: if.end13_func2 (Predecessors: [if.end_func2, if.then8_func2])
+funcP2.addr.0_func2 = phi(func14, func15)
+branch if.end14_func2
+
+
+Basic block 44: if.then11_func2 (Predecessors: [if.else9_func2])
+[112] branch if.end_func2
+
+
+Basic block 45: if.else12_func2 (Predecessors: [if.else9_func2])
+[113] call = call printf(.str[0][0])
+[114] branch return_func2
+
+
+Basic block 46: if.end_func2 (Predecessors: [if.then11_func2])
+branch if.end13_func2
+
+
+Basic block 51: return_func2 (Predecessors: [if.end16_func2, if.else12_func2])
+[120] return 
+
+
+[./samples/ifelse.c] Function: func8
+-------------------------------------
+Basic block 104: entry (Predecessors: [])
+[190] call = call printf(.str.1[0][0], val_func8)
+[191] return 
+
+
+[./samples/ifelse.c] Function: func3
+-------------------------------------
+Basic block 52: entry (Predecessors: [])
+[122] cmp_func3 = val_func3 == 1
+[122] branch (cmp_func3) if.then_func3, if.else_func3
+
+
+Basic block 53: if.then_func3 (Predecessors: [entry])
+[124] branch if.end16_func3
+
+
+Basic block 54: if.else_func3 (Predecessors: [entry])
+[124] cmp1_func3 = val_func3 == 2
+[124] branch (cmp1_func3) if.then2_func3, if.else3_func3
+
+
+Basic block 67: if.end16_func3 (Predecessors: [if.end15_func3, if.then_func3])
+funcP3.addr.3_func3 = phi(func16, funcP3.addr.2_func3)
+[137] (funcP3.addr.3_func3) (val_func3)
+[138] call17 = call printf(.str.1[0][0], val_func3)
+[139] branch return_func3
+
+
+Basic block 55: if.then2_func3 (Predecessors: [if.else_func3])
+[126] branch if.end15_func3
+
+
+Basic block 56: if.else3_func3 (Predecessors: [if.else_func3])
+[126] cmp4_func3 = val_func3 == 3
+[126] branch (cmp4_func3) if.then5_func3, if.else6_func3
+
+
+Basic block 66: if.end15_func3 (Predecessors: [if.end14_func3, if.then2_func3])
+funcP3.addr.2_func3 = phi(func17, funcP3.addr.1_func3)
+branch if.end16_func3
+
+
+Basic block 57: if.then5_func3 (Predecessors: [if.else3_func3])
+[128] branch if.end14_func3
+
+
+Basic block 58: if.else6_func3 (Predecessors: [if.else3_func3])
+[128] cmp7_func3 = val_func3 == 50
+[128] branch (cmp7_func3) if.then8_func3, if.else9_func3
+
+
+Basic block 65: if.end14_func3 (Predecessors: [if.end13_func3, if.then5_func3])
+funcP3.addr.1_func3 = phi(func18, funcP3.addr.0_func3)
+branch if.end15_func3
+
+
+Basic block 59: if.then8_func3 (Predecessors: [if.else6_func3])
+[130] branch if.end13_func3
+
+
+Basic block 60: if.else9_func3 (Predecessors: [if.else6_func3])
+[130] cmp10_func3 = val_func3 == 50
+[130] branch (cmp10_func3) if.then11_func3, if.else12_func3
+
+
+Basic block 64: if.end13_func3 (Predecessors: [if.end_func3, if.then8_func3])
+funcP3.addr.0_func3 = phi(func19, func20)
+branch if.end14_func3
+
+
+Basic block 61: if.then11_func3 (Predecessors: [if.else9_func3])
+[132] branch if.end_func3
+
+
+Basic block 62: if.else12_func3 (Predecessors: [if.else9_func3])
+[133] call = call printf(.str[0][0])
+[134] branch return_func3
+
+
+Basic block 63: if.end_func3 (Predecessors: [if.then11_func3])
+branch if.end13_func3
+
+
+Basic block 68: return_func3 (Predecessors: [if.end16_func3, if.else12_func3])
+[140] return 
+
+
+[./samples/ifelse.c] Function: func15
+-------------------------------------
+Basic block 111: entry (Predecessors: [])
+[218] call = call printf(.str.1[0][0], val_func15)
+[219] return 
+
+
+[./samples/ifelse.c] Function: func4
+-------------------------------------
+Basic block 69: entry (Predecessors: [])
+[142] cmp_func4 = val_func4 == 1
+[142] branch (cmp_func4) if.then_func4, if.else_func4
+
+
+Basic block 70: if.then_func4 (Predecessors: [entry])
+[144] branch if.end16_func4
+
+
+Basic block 71: if.else_func4 (Predecessors: [entry])
+[144] cmp1_func4 = val_func4 == 21
+[144] branch (cmp1_func4) if.then2_func4, if.else3_func4
+
+
+Basic block 84: if.end16_func4 (Predecessors: [if.end15_func4, if.then_func4])
+funcP4.addr.3_func4 = phi(func21, funcP4.addr.2_func4)
+[157] (funcP4.addr.3_func4) (val_func4)
+[158] call17 = call printf(.str.1[0][0], val_func4)
+[159] branch return_func4
+
+
+Basic block 72: if.then2_func4 (Predecessors: [if.else_func4])
+[146] branch if.end15_func4
+
+
+Basic block 73: if.else3_func4 (Predecessors: [if.else_func4])
+[146] cmp4_func4 = val_func4 == 22
+[146] branch (cmp4_func4) if.then5_func4, if.else6_func4
+
+
+Basic block 83: if.end15_func4 (Predecessors: [if.end14_func4, if.then2_func4])
+funcP4.addr.2_func4 = phi(func22, funcP4.addr.1_func4)
+branch if.end16_func4
+
+
+Basic block 74: if.then5_func4 (Predecessors: [if.else3_func4])
+[148] branch if.end14_func4
+
+
+Basic block 75: if.else6_func4 (Predecessors: [if.else3_func4])
+[148] cmp7_func4 = val_func4 == 50
+[148] branch (cmp7_func4) if.then8_func4, if.else9_func4
+
+
+Basic block 82: if.end14_func4 (Predecessors: [if.end13_func4, if.then5_func4])
+funcP4.addr.1_func4 = phi(func23, funcP4.addr.0_func4)
+branch if.end15_func4
+
+
+Basic block 76: if.then8_func4 (Predecessors: [if.else6_func4])
+[150] branch if.end13_func4
+
+
+Basic block 77: if.else9_func4 (Predecessors: [if.else6_func4])
+[150] cmp10_func4 = val_func4 == 50
+[150] branch (cmp10_func4) if.then11_func4, if.else12_func4
+
+
+Basic block 81: if.end13_func4 (Predecessors: [if.end_func4, if.then8_func4])
+funcP4.addr.0_func4 = phi(func24, func25)
+branch if.end14_func4
+
+
+Basic block 78: if.then11_func4 (Predecessors: [if.else9_func4])
+[152] branch if.end_func4
+
+
+Basic block 79: if.else12_func4 (Predecessors: [if.else9_func4])
+[153] call = call printf(.str[0][0])
+[154] branch return_func4
+
+
+Basic block 80: if.end_func4 (Predecessors: [if.then11_func4])
+branch if.end13_func4
+
+
+Basic block 85: return_func4 (Predecessors: [if.end16_func4, if.else12_func4])
+[160] return 
+
+
+[./samples/ifelse.c] Function: func5
+-------------------------------------
+Basic block 86: entry (Predecessors: [])
+[162] cmp_func5 = val_func5 == 1
+[162] branch (cmp_func5) if.then_func5, if.else_func5
+
+
+Basic block 87: if.then_func5 (Predecessors: [entry])
+[164] branch if.end16_func5
+
+
+Basic block 88: if.else_func5 (Predecessors: [entry])
+[164] cmp1_func5 = val_func5 == 2
+[164] branch (cmp1_func5) if.then2_func5, if.else3_func5
+
+
+Basic block 101: if.end16_func5 (Predecessors: [if.end15_func5, if.then_func5])
+funcP5.addr.3_func5 = phi(func26, funcP5.addr.2_func5)
+[177] (funcP5.addr.3_func5) (val_func5)
+[178] call17 = call printf(.str.1[0][0], val_func5)
+[179] branch return_func5
+
+
+Basic block 89: if.then2_func5 (Predecessors: [if.else_func5])
+[166] branch if.end15_func5
+
+
+Basic block 90: if.else3_func5 (Predecessors: [if.else_func5])
+[166] cmp4_func5 = val_func5 == 3
+[166] branch (cmp4_func5) if.then5_func5, if.else6_func5
+
+
+Basic block 100: if.end15_func5 (Predecessors: [if.end14_func5, if.then2_func5])
+funcP5.addr.2_func5 = phi(func27, funcP5.addr.1_func5)
+branch if.end16_func5
+
+
+Basic block 91: if.then5_func5 (Predecessors: [if.else3_func5])
+[168] branch if.end14_func5
+
+
+Basic block 92: if.else6_func5 (Predecessors: [if.else3_func5])
+[168] cmp7_func5 = val_func5 == 50
+[168] branch (cmp7_func5) if.then8_func5, if.else9_func5
+
+
+Basic block 99: if.end14_func5 (Predecessors: [if.end13_func5, if.then5_func5])
+funcP5.addr.1_func5 = phi(func28, funcP5.addr.0_func5)
+branch if.end15_func5
+
+
+Basic block 93: if.then8_func5 (Predecessors: [if.else6_func5])
+[170] branch if.end13_func5
+
+
+Basic block 94: if.else9_func5 (Predecessors: [if.else6_func5])
+[170] cmp10_func5 = val_func5 == 50
+[170] branch (cmp10_func5) if.then11_func5, if.else12_func5
+
+
+Basic block 98: if.end13_func5 (Predecessors: [if.end_func5, if.then8_func5])
+funcP5.addr.0_func5 = phi(func29, func30)
+branch if.end14_func5
+
+
+Basic block 95: if.then11_func5 (Predecessors: [if.else9_func5])
+[172] branch if.end_func5
+
+
+Basic block 96: if.else12_func5 (Predecessors: [if.else9_func5])
+[173] call = call printf(.str[0][0])
+[174] branch return_func5
+
+
+Basic block 97: if.end_func5 (Predecessors: [if.then11_func5])
+branch if.end13_func5
+
+
+Basic block 102: return_func5 (Predecessors: [if.end16_func5, if.else12_func5])
+[180] return 
+
+
+[./samples/ifelse.c] Function: func9
+-------------------------------------
+Basic block 105: entry (Predecessors: [])
+[194] call = call printf(.str.1[0][0], val_func9)
+[195] return 
+
+
+[./samples/ifelse.c] Function: func10
+-------------------------------------
+Basic block 106: entry (Predecessors: [])
+[198] call = call printf(.str.1[0][0], val_func10)
+[199] return 
+
+
+[./samples/ifelse.c] Function: func11
+-------------------------------------
+Basic block 107: entry (Predecessors: [])
+[202] call = call printf(.str.1[0][0], val_func11)
+[203] return 
+
+
+[./samples/ifelse.c] Function: func12
+-------------------------------------
+Basic block 108: entry (Predecessors: [])
+[206] call = call printf(.str.1[0][0], val_func12)
+[207] return 
+
+
+[./samples/ifelse.c] Function: func13
+-------------------------------------
+Basic block 109: entry (Predecessors: [])
+[210] call = call printf(.str.1[0][0], val_func13)
+[211] return 
+
+
+[./samples/ifelse.c] Function: func14
+-------------------------------------
+Basic block 110: entry (Predecessors: [])
+[214] call = call printf(.str.1[0][0], val_func14)
+[215] return 
+
+
+[./samples/ifelse.c] Function: func16
+-------------------------------------
+Basic block 112: entry (Predecessors: [])
+[222] call = call printf(.str.1[0][0], val_func16)
+[223] return 
+
+
+[./samples/ifelse.c] Function: func17
+-------------------------------------
+Basic block 113: entry (Predecessors: [])
+[226] call = call printf(.str.1[0][0], val_func17)
+[227] return 
+
+
+[./samples/ifelse.c] Function: func18
+-------------------------------------
+Basic block 114: entry (Predecessors: [])
+[230] call = call printf(.str.1[0][0], val_func18)
+[231] return 
+
+
+[./samples/ifelse.c] Function: func19
+-------------------------------------
+Basic block 115: entry (Predecessors: [])
+[234] call = call printf(.str.1[0][0], val_func19)
+[235] return 
+
+
+[./samples/ifelse.c] Function: func20
+-------------------------------------
+Basic block 116: entry (Predecessors: [])
+[238] call = call printf(.str.1[0][0], val_func20)
+[239] return 
+
+
+[./samples/ifelse.c] Function: func21
+-------------------------------------
+Basic block 117: entry (Predecessors: [])
+[242] call = call printf(.str.1[0][0], val_func21)
+[243] return 
+
+
+[./samples/ifelse.c] Function: func22
+-------------------------------------
+Basic block 118: entry (Predecessors: [])
+[246] call = call printf(.str.1[0][0], val_func22)
+[247] return 
+
+
+[./samples/ifelse.c] Function: func23
+-------------------------------------
+Basic block 119: entry (Predecessors: [])
+[250] call = call printf(.str.1[0][0], val_func23)
+[251] return 
+
+
+[./samples/ifelse.c] Function: func24
+-------------------------------------
+Basic block 120: entry (Predecessors: [])
+[254] call = call printf(.str.1[0][0], val_func24)
+[255] return 
+
+
+[./samples/ifelse.c] Function: func25
+-------------------------------------
+Basic block 121: entry (Predecessors: [])
+[258] call = call printf(.str.1[0][0], val_func25)
+[259] return 
+
+
+[./samples/ifelse.c] Function: func26
+-------------------------------------
+Basic block 122: entry (Predecessors: [])
+[262] call = call printf(.str.1[0][0], val_func26)
+[263] return 
+
+
+[./samples/ifelse.c] Function: func27
+-------------------------------------
+Basic block 123: entry (Predecessors: [])
+[266] call = call printf(.str.1[0][0], val_func27)
+[267] return 
+
+
+[./samples/ifelse.c] Function: func28
+-------------------------------------
+Basic block 124: entry (Predecessors: [])
+[270] call = call printf(.str.1[0][0], val_func28)
+[271] return 
+
+
+[./samples/ifelse.c] Function: func29
+-------------------------------------
+Basic block 125: entry (Predecessors: [])
+[274] call = call printf(.str.1[0][0], val_func29)
+[275] return 
+
+
+[./samples/ifelse.c] Function: func30
+-------------------------------------
+Basic block 126: entry (Predecessors: [])
+[278] call = call printf(.str.1[0][0], val_func30)
+[279] return 
+
+
